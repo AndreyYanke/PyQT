@@ -10,8 +10,9 @@ from common.variables import *
 from common.utils import *
 from errors import IncorrectDataRecivedError, ReqFieldMissingError, ServerError
 from decos import log
+from descryptors import Port
 from metaclasses import ClientVerifier
-from descrptrs import Port
+
 
 # Инициализация клиентского логера
 logger = logging.getLogger('client')
@@ -20,12 +21,9 @@ logger = logging.getLogger('client')
 # Класс формировки и отправки сообщений на сервер и взаимодействия с пользователем.
 class ClientSender(threading.Thread, metaclass=ClientVerifier):
 
-    server_port = Port()
-
-    def __init__(self, account_name, sock, server_port):
+    def __init__(self, account_name, sock):
         self.account_name = account_name
         self.sock = sock
-        self.server_port = server_port
         super().__init__()
 
     # Функция создаёт словарь с сообщением о выходе.
@@ -148,6 +146,13 @@ def arg_parser():
     server_address = namespace.addr
     server_port = namespace.port
     client_name = namespace.name
+
+    # проверим подходящий номер порта
+    if not 1023 < server_port < 65536:
+        logger.critical(
+            f'Попытка запуска клиента с неподходящим номером порта: {server_port}. Допустимы адреса с 1024 до 65535. Клиент завершается.')
+        exit(1)
+
     return server_address, server_port, client_name
 
 
