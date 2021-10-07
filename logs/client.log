@@ -323,3 +323,24 @@ fgfgd
 2021-09-28 20:51:06,661 CRITICAL client.py Не удалось подключиться к серверу 127.0.0.1:7777, конечный компьютер отверг запрос на подключение.
 2021-09-28 20:51:06,661 CRITICAL client.py Не удалось подключиться к серверу 127.0.0.1:7777, конечный компьютер отверг запрос на подключение.
 2021-09-28 20:51:06,677 CRITICAL client.py Не удалось подключиться к серверу 127.0.0.1:7777, конечный компьютер отверг запрос на подключение.
+2021-10-05 21:40:25,298 CRITICAL config_client_log.py Test critical event
+2021-10-05 21:40:25,299 ERROR config_client_log.py Test error ivent
+2021-10-05 21:40:25,299 DEBUG config_client_log.py Test debug ivent
+2021-10-05 21:40:25,299 INFO config_client_log.py Test info ivent
+2021-10-05 21:41:46,706 DEBUG decos.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2021-10-05 21:41:51,786 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test1
+2021-10-05 21:41:51,932 INFO transport.py Попытка подключения №1
+2021-10-05 21:41:51,933 DEBUG transport.py Установлено соединение с сервером
+2021-10-05 21:41:51,933 DEBUG transport.py Сформировано presence сообщение для пользователя test1
+2021-10-05 21:41:51,934 DEBUG decos.py Была вызвана функция send_message c параметрами (<socket.socket fd=1252, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 25805), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1633459311.933495, 'user': {'account_name': 'test1'}}) , {}. Вызов из модуля common.utils
+2021-10-05 21:41:51,934 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=1252, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 25805), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2021-10-05 21:41:51,947 DEBUG transport.py Разбор сообщения от сервера: {'response': 511, 'bin': 'e2c4637b956dab8fb4e57f0d9161fc8ce479db0068e4f5347eb0f1ace9f859cd84905e047349594bf8e74ed52085b5248b1dbea942806fc240141a14de8ff261'}
+2021-10-05 21:41:51,948 DEBUG transport.py Принят неизвестный код подтверждения 511
+2021-10-05 21:41:51,948 INFO transport.py Соединение с сервером успешно установлено.
+2021-10-05 21:41:51,948 DEBUG transport.py Запрос списка известных пользователей test1
+2021-10-05 21:41:51,948 DEBUG decos.py Была вызвана функция send_message c параметрами (<socket.socket fd=1252, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 25805), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1633459311.9484446, 'account_name': 'test1'}) , {}. Вызов из модуля common.utils
+2021-10-05 21:41:51,949 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=1252, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 25805), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2021-10-05 21:41:56,950 ERROR transport.py Timeout соединения при обновлении списков пользователей.
+2021-10-05 21:41:56,951 DEBUG transport.py Запущен процесс - приёмник собщений с сервера.
+2021-10-05 21:41:57,953 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=1252, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 25805), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2021-10-05 21:41:59,486 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=1252, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 25805), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils

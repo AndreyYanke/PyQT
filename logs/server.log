@@ -55,3 +55,21 @@
 2021-09-27 21:34:31,225 INFO server.py Запущен сервер, порт для подключений: 7777 , адрес с которого принимаются подключения: . Если адрес не указан, принимаются соединения с любых адресов.
 2021-10-05 21:10:15,054 DEBUG decos.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
 2021-10-05 21:10:15,257 INFO server.py Запущен сервер, порт для подключений: 7777 , адрес с которого принимаются подключения: . Если адрес не указан, принимаются соединения с любых адресов.
+2021-10-05 21:40:21,096 CRITICAL config_server_log.py Test critical event
+2021-10-05 21:40:21,096 ERROR config_server_log.py Test error ivent
+2021-10-05 21:40:21,096 DEBUG config_server_log.py Test debug ivent
+2021-10-05 21:40:21,096 INFO config_server_log.py Test info ivent
+2021-10-05 21:40:35,818 DEBUG decos.py Была вызвана функция main c параметрами () , {}. Вызов из модуля __main__
+2021-10-05 21:40:35,818 DEBUG decos.py Была вызвана функция config_load c параметрами () , {}. Вызов из модуля __main__
+2021-10-05 21:40:35,819 DEBUG decos.py Была вызвана функция arg_parser c параметрами ('7777', '') , {}. Вызов из модуля __main__
+2021-10-05 21:40:35,819 DEBUG server.py Инициализация парсера аргументов коммандной строки: ['D:/Study/3_part/PyQT/server.py']
+2021-10-05 21:40:35,829 DEBUG server.py Аргументы успешно загружены.
+2021-10-05 21:40:35,958 INFO core.py Запущен сервер, порт для подключений: 7777 , адрес с которого принимаются подключения: . Если адрес не указан, принимаются соединения с любых адресов.
+2021-10-05 21:41:51,934 INFO core.py Установлено соедение с ПК ('127.0.0.1', 25805)
+2021-10-05 21:41:51,935 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=1696, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 25805)>,) , {}. Вызов из модуля common.utils
+2021-10-05 21:41:51,936 DEBUG core.py Разбор сообщения от клиента : {'action': 'presence', 'time': 1633459311.933495, 'user': {'account_name': 'test1'}}
+2021-10-05 21:41:51,936 DEBUG core.py Start auth process for {'account_name': 'test1'}
+2021-10-05 21:41:51,943 DEBUG core.py Correct username, starting passwd check.
+2021-10-05 21:41:51,946 DEBUG core.py Auth message = {'response': 511, 'bin': 'e2c4637b956dab8fb4e57f0d9161fc8ce479db0068e4f5347eb0f1ace9f859cd84905e047349594bf8e74ed52085b5248b1dbea942806fc240141a14de8ff261'}
+2021-10-05 21:41:51,947 DEBUG decos.py Была вызвана функция send_message c параметрами (<socket.socket fd=1696, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 25805)>, {'response': 511, 'bin': 'e2c4637b956dab8fb4e57f0d9161fc8ce479db0068e4f5347eb0f1ace9f859cd84905e047349594bf8e74ed52085b5248b1dbea942806fc240141a14de8ff261'}) , {}. Вызов из модуля common.utils
+2021-10-05 21:41:51,947 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=1696, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 25805)>,) , {}. Вызов из модуля common.utils
